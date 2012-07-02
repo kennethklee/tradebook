@@ -1,3 +1,8 @@
+/**
+ * Application entry point.
+ */
+
+// Entry point
 $(document).bind('pageinit', function() {
   setTimeout(function() {
     $.mobile.showPageLoadingMsg("a", "Please wait...", true);
