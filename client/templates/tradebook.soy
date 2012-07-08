@@ -1,0 +1,15 @@
+{namespace Tradebook.Templates}
+
+/**
+ * Says hello to the world.
+ */
+{template .front}
+  <div data-role="content">
+    hello world!
+    {foreach $country in $countries}
+      {call .front.icon data="$country" /}
+    {/foreach}
+  </div>
+{/template}
+
+{template .front}
