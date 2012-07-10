@@ -8,7 +8,7 @@
 
   <title>IMEX Tradebook 2012</title>
 
-  <link rel="stylesheet" href="assets/stylesheets/reset.css" />
+  <!-- <link rel="stylesheet" href="assets/stylesheets/reset.css" /> -->
 
   <!-- jQuery -->
   <script type="text/javascript" src="assets/vendors/jquery/jquery-1.7.2.min.js"></script>
@@ -34,18 +34,24 @@
   <script type="text/javascript" src="assets/javascripts/tradebook.js"></script>
 
   <!-- Templates -->
-  <script type="text/javascript" src="assets/javascripts/templates/tradebook.js"></script>
+  <script type="text/javascript" src="assets/javascripts/templates/tradebook.template.js"></script>
 
   <!-- Models -->
-  <script type="text/javascript" src="assets/javascripts/models/app.model.js"></script>
+  <script type="text/javascript" src="assets/javascripts/models/application.model.js"></script>
+  <script type="text/javascript" src="assets/javascripts/models/country.model.js"></script>
 
   <!-- Presenters -->
+  <script type="text/javascript" src="assets/javascripts/presenters/application.view.js"></script>
   <script type="text/javascript" src="assets/javascripts/presenters/settings.view.js"></script>
   <script type="text/javascript" src="assets/javascripts/presenters/front.view.js"></script>
 
 </head>
 <body>
   <div data-role="page" id='front'>
+    <div data-role="header">
+      <h1>Single page</h1>
+    </div><!-- /header -->
+  
   </div>
 </body>
 </html>

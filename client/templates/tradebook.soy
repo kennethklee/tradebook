@@ -1,15 +1,27 @@
 {namespace Tradebook.Templates}
 
 /**
- * Says hello to the world.
+ * Front application page
+ * @param countries listing of countries
  */
 {template .front}
+  <div data-role="header">
+    <h1>Blah</h1>
+  </div>
   <div data-role="content">
+    
     hello world!
     {foreach $country in $countries}
-      {call .front.icon data="$country" /}
+      {call .front_icon data="$country" /}
     {/foreach}
   </div>
 {/template}
 
-{template .front}
+
+/**
+ * Icon
+ * @param name country name
+ */
+{template .front_icon}
+  <a class='icon' href=''>{$name}</a>
+{/template}

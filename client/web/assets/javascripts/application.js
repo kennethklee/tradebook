@@ -3,7 +3,7 @@
  */
 
 // Entry point
-$(document).bind('pageinit', function() {
+$(document).bind('ready', function() {
   window.Application = new Tradebook();
 });
 

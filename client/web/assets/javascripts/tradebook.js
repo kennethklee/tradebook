@@ -1,20 +1,13 @@
-/**
- *  Tradebook
- */
-(function () {
+(function() {
   var T = function() {
     var args = Array.prototype.slice.call(arguments, 0);
-    return T.init.apply(T, args);
+    var app = new Tradebook.Views.Application(args);
+    return app.render();
   };
+
   T.VERSION = '1.0.0';
   T.Views = T.Models = T.Collections = {};
   
-  T.init = function() {
-    
-    return {};
-  };
-  
-
   window.Tradebook = T;
-})();
 
+})();
