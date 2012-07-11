@@ -1,13 +1,13 @@
-Tradebook.Views.Application = Backbone.View.extend({
+Tradebook.Application = Backbone.View.extend({
   el: 'body',
   model: new Tradebook.Models.Application(),
-  collection: new Tradebook.Models.Countries([{name: 'Canada'}]),
   
-  render: function() {
-    this.$('#front').html(Tradebook.Templates.front({countries: this.collection.toJSON()}));
+  initialize: function() {
+    Tradebook.Helpers.log('app init');
+    this.router = new Tradebook.Router();
     
-    return this;
+    new Tradebook.Views.Menu(this.router);
+    
+    this.router.start();
   },
-  
-  
 });
