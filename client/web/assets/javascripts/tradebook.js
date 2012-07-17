@@ -56,7 +56,7 @@
       }
     },
     hashToParams: function(hash) {
-      return hash.match('#?/?(.*)')[1].split('/')
+      return hash.match('#?(.*)')[1].split('-')
 		},
     paramsToHash: function() {
       var params = [];
@@ -65,7 +65,7 @@
       } else {
         params = Array.prototype.slice.call(arguments, 0);
       }
-      return '#/' + params.join('/');
+      return '#' + params.join('-');
     }
   };
   T.Helpers = H;
