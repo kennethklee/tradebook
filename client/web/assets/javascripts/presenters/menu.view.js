@@ -7,8 +7,8 @@ Tradebook.Views.Menu = Backbone.View.extend({
   collection: new Tradebook.Models.Countries([{name: 'Canada'}]),
   
   initialize: function(router) {
-    Tradebook.Helpers.log('registered menu');
-    router.add('menu', this);
+    //Tradebook.Helpers.log('registered menu');
+    //router.add('menu', this);
   },
   
   render: function() {
