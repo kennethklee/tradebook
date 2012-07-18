@@ -7,6 +7,5 @@ $.mobile.hashListeningEnabled = false
 
 // Entry point
 $(function() {
-  console.log('Application Begins! ');
-  window.Application = new Tradebook();
+  window.app = new Tradebook({debug: true});
 });

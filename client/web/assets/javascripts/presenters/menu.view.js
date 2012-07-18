@@ -1,14 +1,15 @@
 Tradebook.Views.Menu = Backbone.View.extend({
   attributes: {
     'data-role' : 'page',
-    'data-url'  : 'menu',
+    'data-url'  : 'menu'
   },
   
-  collection: new Tradebook.Models.Countries([{name: 'Canada'}]),
+  routes: {
+    'menu': 'render'
+  },
   
-  initialize: function(router) {
-    //Tradebook.Helpers.log('registered menu');
-    //router.add('menu', this);
+  initialize: function() {
+    this.collection = new Tradebook.Models.Countries([{name: 'Canada'}]);
   },
   
   render: function() {
@@ -17,8 +18,8 @@ Tradebook.Views.Menu = Backbone.View.extend({
     if (!$('[data-url=menu]').length) {
       $('body').append(this.el);
     }
-    Tradebook.Helpers.log('rendered menu');
+    
     return this;
-  },
+  }
   
 });
