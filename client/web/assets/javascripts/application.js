@@ -2,8 +2,10 @@
  * Application entry point.
  */
 
-// Entry point
-$(document).bind('ready', function() {
-  window.Application = new Tradebook();
-});
+// Stupid JQM
+$.mobile.hashListeningEnabled = false
 
+// Entry point
+$(function() {
+  window.app = new Tradebook({debug: true});
+});
